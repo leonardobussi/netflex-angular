@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
+  menuOpened = false;
+
   listTitles = [{
       trailer: 'assets/videos/cap.mp4',
       cover: 'assets/images/guardios-da-galaxia.jpg',
@@ -41,5 +43,12 @@ export class AppComponent {
       categories: ['nada sei', 'vai saber', 'top']
     }
   ]
+
+  setMenuState(state: boolean){
+    this.menuOpened = state
+  }
+  closeMenu(){
+    this.menuOpened = false
+  }
 
 }
